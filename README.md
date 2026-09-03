@@ -2,9 +2,12 @@
 
 > Cinematic, scroll-driven interactive hero experience created for the Physics Student Association at Instituto Superior Técnico (NFIST - IST Lisbon).
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-nfist--preview.site-amber.svg)](https://nfist-preview.site)
 [![Vanilla JS](https://img.shields.io/badge/JavaScript-ES6-F7DF1E.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![HTML5 / CSS3](https://img.shields.io/badge/HTML5-CSS3-E34F26.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![SVG Shaders](https://img.shields.io/badge/SVG-feColorMatrix-00599C.svg)](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix)
+
+**?? Live Demo:** [https://nfist-preview.site](https://nfist-preview.site)
 
 ---
 
