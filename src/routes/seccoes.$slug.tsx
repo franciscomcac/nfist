@@ -32,8 +32,20 @@ export const Route = createFileRoute("/seccoes/$slug")({
       ],
       links: [
         { rel: "canonical", href: `/seccoes/${params.slug}` },
-        { rel: "preload", as: "image", href: img(d.hero, 1600), fetchpriority: "high" },
-        ...(d.gallery ?? []).map((url) => ({ rel: "preload", as: "image", href: img(url, 600) })),
+        {
+          rel: "preload",
+          as: "image",
+          href: img(d.hero, 1600),
+          imagesrcset: imgSrcSet(d.hero, [768, 1200, 1600, 1920]),
+          imagesizes: "100vw",
+        },
+        ...(d.gallery ?? []).map((url) => ({
+          rel: "preload",
+          as: "image",
+          href: img(url, 600),
+          imagesrcset: imgSrcSet(url, [400, 600, 900]),
+          imagesizes: "(min-width: 640px) 33vw, 50vw",
+        })),
       ],
     };
   },
