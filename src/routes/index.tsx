@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
         rel: "preload",
         as: "image",
         href: img("https://nfist.tecnico.ulisboa.pt/media/photos/NFIST-bg.JPG", 1600),
-        fetchpriority: "high",
+        fetchPriority: "high",
       },
     ],
   }),

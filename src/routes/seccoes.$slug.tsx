@@ -32,8 +32,20 @@ export const Route = createFileRoute("/seccoes/$slug")({
       ],
       links: [
         { rel: "canonical", href: `/seccoes/${params.slug}` },
-        { rel: "preload", as: "image", href: img(d.hero, 1600), fetchpriority: "high" },
-        ...(d.gallery ?? []).map((url) => ({ rel: "preload", as: "image", href: img(url, 600) })),
+        {
+          rel: "preload",
+          as: "image",
+          href: img(d.hero, 1600),
+          imagesrcset: imgSrcSet(d.hero, [768, 1200, 1600, 1920]),
+          imagesizes: "100vw",
+        },
+        ...(d.gallery ?? []).map((url) => ({
+          rel: "preload",
+          as: "image",
+          href: img(url, 600),
+          imagesrcset: imgSrcSet(url, [400, 600, 900]),
+          imagesizes: "(min-width: 640px) 33vw, 50vw",
+        })),
       ],
     };
   },
@@ -60,8 +72,8 @@ function DivisionPage() {
       {/* Hero */}
       <header className="relative h-[60vh] sm:h-[70vh] min-h-[440px] sm:min-h-[520px] flex items-end overflow-hidden">
         <img
-          src={img(d.hero, 1600, 75)}
-          srcSet={imgSrcSet(d.hero, [768, 1200, 1600, 1920], 75)}
+          src={img(d.hero, 1600)}
+          srcSet={imgSrcSet(d.hero, [768, 1200, 1600, 1920])}
           sizes="100vw"
           alt=""
           fetchPriority="high"
