@@ -62,10 +62,8 @@ export function ImagePrefetcher() {
         image.loading = "eager";
         image.decoding = "async";
         image.fetchPriority = item.hero ? "high" : "auto";
-        image.sizes = item.hero ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 640px) 33vw, 50vw";
-        image.srcset = item.hero
-          ? imgSrcSet(item.url, [600, 900, 1200])
-          : imgSrcSet(item.url, [400, 600, 900]);
+        image.sizes = item.sizes;
+        image.srcset = imgSrcSet(item.url, item.widths);
         const done = () => {
           inflight--;
           if (!cancelled) pump();
