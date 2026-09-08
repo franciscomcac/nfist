@@ -76,7 +76,7 @@ export function ImagePrefetcher() {
           }
         };
         image.onerror = done;
-        image.src = img(item.url, item.hero ? 1000 : 600);
+        image.src = img(item.url, item.base);
       }
     };
 
