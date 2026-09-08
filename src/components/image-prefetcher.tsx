@@ -22,9 +22,31 @@ export function ImagePrefetcher() {
       d.gallery?.forEach((g) => galleryUrls.add(g));
     }
 
-    const list = [
-      ...Array.from(heroUrls, (url) => ({ url, hero: true })),
-      ...Array.from(galleryUrls, (url) => ({ url, hero: false })),
+    type Warm = { url: string; hero: boolean; sizes: string; widths: number[]; base: number };
+    const list: Warm[] = [
+      // Full-bleed detail hero variant.
+      ...Array.from(heroUrls, (url) => ({
+        url,
+        hero: true,
+        sizes: "100vw",
+        widths: [768, 1200, 1600, 1920],
+        base: 1600,
+      })),
+      // Half-width overview variant.
+      ...Array.from(heroUrls, (url) => ({
+        url,
+        hero: true,
+        sizes: "(min-width: 768px) 50vw, 100vw",
+        widths: [600, 900, 1200],
+        base: 1000,
+      })),
+      ...Array.from(galleryUrls, (url) => ({
+        url,
+        hero: false,
+        sizes: "(min-width: 640px) 33vw, 50vw",
+        widths: [400, 600, 900],
+        base: 600,
+      })),
     ];
     let cancelled = false;
     let cursor = 0;
