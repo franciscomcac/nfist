@@ -149,6 +149,7 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const router = useRouter();
   const pathname = router.state.location.pathname;
+  const isNavigating = useRouterState({ select: (state) => state.status === "pending" });
   const isAdmin = pathname.startsWith("/admin") || pathname.startsWith("/auth");
   return (
     <QueryClientProvider client={queryClient}>
