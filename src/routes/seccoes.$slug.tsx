@@ -72,8 +72,8 @@ function DivisionPage() {
       {/* Hero */}
       <header className="relative h-[60vh] sm:h-[70vh] min-h-[440px] sm:min-h-[520px] flex items-end overflow-hidden">
         <img
-          src={img(d.hero, 1600, 75)}
-          srcSet={imgSrcSet(d.hero, [768, 1200, 1600, 1920], 75)}
+          src={img(d.hero, 1600)}
+          srcSet={imgSrcSet(d.hero, [768, 1200, 1600, 1920])}
           sizes="100vw"
           alt=""
           fetchPriority="high"
