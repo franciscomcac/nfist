@@ -1,0 +1,17 @@
+# NFIST — Núcleo de Física do Instituto Superior Técnico
+
+> Enquadramento institucional para a investigação e comunicação de Física no Instituto Superior Técnico da Universidade de Lisboa.
+
+## Pages
+
+- [Início](/): Apresentação do núcleo, secções, eventos em destaque e publicações recentes.
+- [Secções](/seccoes): As cinco secções do NFIST — Circo, Astro, Pulsar, Recreativa e Info.
+- [Eventos e Programas](/eventos): Programas e eventos científicos organizados pelo núcleo.
+- [Repositório](/repositorio): Apontamentos, edições da revista Pulsar e materiais institucionais.
+- [Calendário](/calendario): Calendário público de actividades do NFIST.
+- [Contactos](/contactos): Endereço no campus da Alameda, e-mail e redes sociais.
+
+## Optional
+
+- [Política de Privacidade](/privacidade)
+- [Termos e Aviso Legal](/termos)
